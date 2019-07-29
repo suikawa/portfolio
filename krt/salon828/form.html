@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>FORM</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="imgs/logoSLM.png">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+	<!-- ローディング用js -->
+	<script src="jquery-1.12.1.min.js"></script>
+	<script src="fade.js"></script>
+	<style>
+	/* ローディング用 */
+	#fade-image div {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      margin:auto;
+      background: center no-repeat;
+      background-size: 150px 150px;
+      display: none;
+      z-index: 9999;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html,body {
+		height: 100%;
+	}
+	#navpc {
+		display: none;
+	}
+	form {
+		width: 100%;
+		margin: 0 auto;
+		font-size: 14px;
+		font-family: 'Sawarabi Gothic', sans-serif;
+	}
+	header p {
+		height: 13vh;
+		background-image: url(imgs/SVG/cutcutcutraw.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 200px 346px;
+		text-indent: -99999px;
+	}
+	#all {
+		margin: 20px auto 10px;
+		padding: 10px auto;
+		max-width: 500px;
+		background-image: url(imgs/logoSML.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		text-align: center;
+	}
+	h1 {
+		margin: 20px auto 0;
+		max-width: 500px;
+		text-align: center;
+		font-size: 19px;
+		vertical-align: bottom;
+		border-bottom: solid 2px rgba(65,105,225,0.9);
+	}
+	table {
+		margin: 10px auto;
+		color: black;
+	}
+	th {
+		text-align: left;
+	}
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+		height: 30px;
+		padding: 5px;
+	}
+	input[type="submit"] {
+		padding: 5px 30px;
+		cursor: pointer;
+		border: none;
+		font-size: 17px;
+		background: rgba(65,105,225,0.9);
+		color: white;
+	}
+	textarea {
+		width: 100%;
+		height: 60px;
+		padding: 10px 5px;
+	}
+	input[type="submit"] {
+		text-align: center;
+	}
+	input[type="submit"]:hover {
+		opacity: 0.8;
+	}
+	input[type="submit"]:active {
+		color: #fff;
+	}
+
+	/*  footer  */
+	footer #foot {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-around;
+		height: 52px;
+		background: rgba(65,105,225,0.9);
+	}
+	footer #foot p {
+		margin: auto 0;
+		text-align: center;
+		margin-right: 1%;
+		color: white;
+	}
+	footer #foot p a {
+		font-size: 13px;
+		text-decoration: none;
+		color: white;
+	}
+	footer #foot p a:hover {
+		opacity: 0.5;
+	}
+	footer #foot p i {
+		font-size: 24px;
+	}
+	footer #copy {
+		display: none;
+	}
+
+	/*------------MediaQuery------------*/
+	/*681px以上 1024px*/
+	@media screen and (min-width: 681px) {
+		#navpc {
+			max-width: 1024px;
+			line-height: 45px;
+			margin: 0 auto;
+			display: block;
+		}
+		#navpc ul {
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			font-size: 13px;
+			background: white;
+		}
+		#navpc ul li {
+			width: 30%;
+			margin-right: 10px;
+		}
+		#navpc ul li:last-of-type {
+			margin-right: 10px;
+		}
+		#navpc ul li a {
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			color: dimgray;
+		}
+		#navpc ul li a:hover {
+			line-height: 36px;
+			margin-top: 8px;
+			border-top: solid 1px dimgray;
+			opacity: 0.7;
+		}
+		header p {
+			height: 40vh;
+		}
+		footer #foot {
+			padding-bottom: 23px;
+			height: 50px;
+			position: relative;
+			justify-content: center;
+		}
+		footer #foot p {
+			margin-right: 24px;
+		}
+		footer #foot p:last-of-type {
+			margin-right: 0;
+		}
+		footer #foot p a:hover {
+			text-decoration: underline;
+		}
+		footer #foot p i {
+			text-indent: -99999px;
+		}
+		footer #copy {
+			display: block;
+			margin: auto 0;
+			text-align: center;
+			font-size: 10px;
+			background: rgba(65,105,225,0.9);
+			color: white;
+		}
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="wrap">
+	<!-- PCmenu -->
+		<div id="navpcdiv">
+			<nav id="navpc">
+				<ul>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/index.html"><i class="fas fa-desktop"></i> トップ</a></li>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/menu.html"><i class="fas fa-clipboard-list"></i> メニュー・料金</a></li>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/shop.html"><i class="fas fa-map-marked-alt"></i> 店舗</a></li>
+				</ul>
+			</nav>
+		</div>
+		<form action="mail.php" method="post">
+			<header>
+				<p>logo</p>
+				<h1>お問い合わせフォーム</h1>
+			</header>
+			<div id="all">
+				<table>
+					<tr>
+						<th><i class="fas fa-id-card"></i> お名前</th>
+					</tr>
+					<tr>
+						<td><input type="text" name="name"></td>
+					</tr>
+					<tr>
+						<th><i class="fas fa-envelope"></i> Emailアドレス</th>
+					</tr>
+					<tr>
+						<td><input type="email" name="email"></td>
+					</tr>
+					<tr>
+						<th><i class="fas fa-comments"></i> お問い合わせ内容</th>
+					</tr>
+					<tr>
+						<td><textarea name="comment" rows="4" cols="40"></textarea></td>
+					</tr>
+				</table>
+				<div class="btn">
+					<input type="submit" value="送信">
+				</div>
+			</div>
+			<!-- footer -->
+			<footer>
+			<div id="foot">
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/index.html"><i class="fas fa-desktop"></i><br>トップ</a></p>
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/menu.html"><i class="fas fa-clipboard-list"></i><br>料金</a></p>
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/shop.html"><i class="fas fa-map-marked-alt"></i><br>店舗</a></p>
+			</div>
+			<p id="copy">© 2018 Kawanami</p>
+		</footer>
+		</form>
+	</div>
+
+<script>
+ 		/* ローディング用 */
+	deley_time = 2000; //フェードアニメーションのスピード 1000 = 1秒
+	    image_list = [
+	    　 "imgs/cutcutcutlogo3.gif",
+	    ]
+</script>
+</body>
+</html>

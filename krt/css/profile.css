@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+/* ローディング用 */
+#fade-image div {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	margin:auto;
+	background: center no-repeat;
+	background-size: 150px 150px;
+	display: none;
+	z-index: 9999;
+}
+
+
+/* シート全体 */
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	position: relative;
+	height: 100%;
+}
+body {
+    background: #fffff0;
+    margin: 0;
+	padding: 0;
+}
+img {
+	width: 100%;
+	height: 100%
+	vertical-align: bottom;
+}
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #555555;
+}
+
+/*　header　*/
+header {
+	height: 50px;
+}
+header h1 {
+	height: 100%;
+	text-indent: -99999px;
+	background: url(../web_img/profile_1.svg) center center no-repeat;
+	background-size: cover;
+}
+header #face {
+	height: 300px;
+	background: url(../web_img/myface_4.svg) center center no-repeat;
+	text-indent: -99999px;
+}
+nav {
+	position: relative;
+}
+nav p {
+	position: absolute;
+	top: -54px;
+	right: 10px;
+}
+nav p span {
+	display: block;
+	text-indent: -99999px;
+}
+nav p:after {
+	content: "\f0c9";
+	display: block;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+nav p.off:after {
+	content: "\f00d";
+	display: block;
+}
+nav ul {
+	display: none;
+	width: 100%;
+	list-style: none;
+	position: absolute;
+	top: 5px;
+	z-index: 99999;
+	cursor: pointer;
+}
+nav ul li {
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 5px;
+	background: #555555;
+}
+nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fffff0;
+}
+nav ul li a:hover {
+	color: #555555;
+}
+nav ul li:hover {
+	background: #fffff0;
+}
+
+
+/* aaa */
+#aaa {
+	margin: 40px 0 0;
+}
+#aaa #name {
+	margin: 310px 0 120px;
+	text-align: center;
+}
+#aaa #welcome p {
+	margin: 30px 20px 20px;
+}
+#aaa h2 {
+	margin-left: 50px;
+	border-top: 2px solid #555555;
+	font-size: 16px;
+	display: inline-block;
+}
+#aaa h2:nth-of-type(1) {
+	margin-top: 50px;
+}
+#aaa h2:nth-of-type(2) {
+	margin-top: 20px;
+}
+#aaa ul {
+	margin-left: 70px;
+	list-style: none;
+}
+#aaa ul li,{
+	display: inline-block;
+	font-size: 16px;
+}
+
+#contact {
+	margin: 50px auto;
+	text-align: center;
+}
+#contact a {
+	text-decoration: none;
+	color: #555555;
+	cursor: pointer;
+}
+/* footer */
+footer #copyright {
+	margin-top: 20px;
+	font-size: 8px;
+	text-align: center;
+}
+
+
+
+
+
+/*------------ MediaQuery ------------*/
+/* 751px以上 */
+@media screen and (min-width: 751px) {
+	#aaa #welcome p {
+		width: 650px;
+		margin: 30px auto 20px;
+	}
+	#aaa {
+		width: 650px;
+		margin: 40px auto 0;
+	}
+	#contact {
+		margin: 100px auto;
+	}
+}
+
+
+
+
+/* 981px以上 */
+@media screen and (min-width: 981px) {
+	#wrap {
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		color: #555555;
+		background: url(../web_img/top_profile.svg) top left no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	header {
+		height: 0;
+	}
+	header h1 {
+		height: 100%;
+		text-indent: -99999px;
+		background: none;
+	}
+	header #face {
+		background: none;
+	}
+	nav p,nav p:after,nav p.off:after {
+		display: none;
+	}
+	nav ul {
+		width: 80px;
+		position: absolute;
+		top: 200px;
+		left: 20px;
+	}
+	nav ul li {
+		width: 100%;
+		line-height: 27px;
+		margin-bottom: 50px;
+		background: none;
+	}
+	nav ul li a {
+		display: block;
+		text-decoration: none;
+		color: #000;
+	}
+	nav ul li a:hover {
+		color: #000;
+		cursor: pointer;
+	}
+	nav ul li:hover {
+		border-top: solid 1px #000;
+		background: none;
+	}
+	nav ul li:nth-of-type(1):hover {
+		margin-bottom: 49px;
+	}
+	nav ul li:nth-of-type(2):hover {
+		margin-bottom: -1px;
+	}
+	#aaa {
+		width: 50%;
+	}
+	#aaa #name {
+		display: none;
+	}
+	#aaa #welcome {
+		width: 50%;
+		position: absolute;
+		top: 30px;
+		right: 10px;
+	}
+	#aaa #welcome p {
+		margin: 0 20px 20px;
+	}
+	#aaa #all {
+		position: absolute;
+		top: 400px;
+		right: 400px;
+	}
+	#aaa #skillsoft {
+		width: 300px;
+		display: flex;
+	}
+	#aaa h2 {
+		margin-left: 20px;
+		border-top: 2px solid #555555;
+		font-size: 16px;
+		display: inline-block;
+	}
+	#aaa h2:nth-of-type(1) {
+		margin-top: 20px;
+	}
+	#aaa h2:nth-of-type(2) {
+		margin-top: 0;
+	}
+	#aaa ul {
+		margin-left: 40px;
+	}
+	#aaa ul li,{
+		display: inline-block;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	#contact {
+		margin: 0 auto;
+		position: absolute;
+		bottom: 30px;
+		left: 45%;
+	}
+	footer #copyright {
+		position: absolute;
+		bottom: 0px;
+		left: 45%;
+	}
+}

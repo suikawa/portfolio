@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+/* ローディング用 */
+#fade-image div {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	margin:auto;
+	background: center no-repeat;
+	background-size: 150px 150px;
+	display: none;
+	z-index: 9999;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	height: 100%;
+}
+img {
+	width: 100%;
+	height: 100%
+	vertical-align: bottom;
+}
+.clearfix {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+	font-family: 'Sawarabi Gothic', sans-serif;
+	font-size: 14px;
+}
+h2 {
+	font-size: 16px;
+}
+/*  header  */
+header #topphoto {
+	height: 80vh;
+	background-image: url(imgs/SVG/cutcutcutlogo.svg) ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 300px 300px;
+}
+header #topphoto h1 {
+	text-indent: -99999px;
+}
+
+/*  main  */
+#road {
+	margin-top: 50px;
+	padding-bottom: 30px;
+	height: 280px;
+	text-align: center;
+	background: lightgray;
+}
+#road h2 {
+	width: 100px;
+	padding-top: 20px;
+	margin: 0 auto 20px;
+	border-bottom: solid 2px rgba(65,105,225,0.9);
+}
+#road a {
+	margin: 0 auto;
+}
+#road a:first-of-type {
+	display: block;
+	width: 280px;
+	line-height: 100px;
+	text-decoration: none;
+	color: white;
+	background: rgba(65,105,225,0.9);
+}
+#road a:last-of-type {
+	display: block;
+	margin-top: 5px;
+	width: 280px;
+	line-height: 100px;
+	text-decoration: none;
+	color: white;
+	background: tomato;
+}
+#road a:hover {
+	opacity: 0.7;
+}
+#maininner {
+	margin: 50px auto 0;
+	padding-bottom: 120px;
+	width: 85%;
+}
+#maininner h2 {
+	width: 80px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0 0 0;
+	border-bottom: solid 2px rgba(65,105,225,0.9);
+}
+#maininner dl {
+	margin-left: 10%;
+	font-size: 15px;
+}
+#maininner dl dt {
+	margin-top: 10px;
+}
+#call {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+#call p {
+	text-align: center;
+}
+#call p:first-of-type {
+	font-weight: 900;
+	font-size: 24px;
+	color: tomato;
+}
+#call > a {
+	display: inline-block;
+	margin-left: 20px;
+	width: 130px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background: tomato;
+}
+#call > a:hover {
+	opacity: 0.6;
+}
+
+#navpc {
+	display: none;
+}
+#navs {
+	margin-top: 110px;
+}
+#navs ul {
+	margin-top: 50px;
+}
+#navs ul li {
+	margin: 5px 0;
+	line-height: 60px;
+	list-style: none;
+	text-align: center;
+	background: rgba(65,105,225,0.9);
+}
+#navs ul li a {
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+#navs ul li:hover {
+	background: rgba(240,255,255,0.9);
+	
+}
+#navs ul li a:hover {
+	text-decoration: underline;
+	color: gray;
+}
+#tel {
+	margin-top: 20px;
+	text-align: center;
+}
+#word {
+	line-height: 30px;
+	margin: 50px 0;
+	text-align: center;
+}
+#word h2 {
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0 0 0;
+	border-bottom: solid 2px rgba(65,105,225,0.9);
+}
+#word a {
+	margin-top: 20px;
+	width: 140px;
+	line-height: 35px;
+	display: inline-block;
+	border: solid 1.5px rgba(65,105,225,0.9);
+	border-radius: 8px;
+	color: rgba(65,105,225,1);
+	text-decoration: none;
+}
+#word a:hover {
+	opacity: 0.6;
+}
+#frontfoot {
+	margin-bottom: 90px;
+	padding: 20px 0 20px;
+	text-align: center;
+	background: lightgray;
+	display: none;
+}
+#frontfoot a {
+	width: 180px;
+	line-height: 35px;
+	margin-top: 10px;
+	display: inline-block;
+	border: solid 1.5px rgba(65,105,225,0.9);
+	border-radius: 8px;
+	background: white;
+	color: rgba(65,105,225,1);
+	text-decoration: none;
+}
+#frontfoot a:hover {
+	opacity: 0.6;
+}
+/*  footer  */
+footer #foot {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	height: 52px;
+	background: rgba(65,105,225,0.9);
+}
+footer #foot p {
+	margin: auto 0;
+	text-align: center;
+	margin-right: 1%;
+	color: white;
+}
+footer #foot p a {
+	font-size: 13px;
+	text-decoration: none;
+	color: white;
+}
+footer #foot p a:hover {
+	opacity: 0.5;
+}
+footer #foot p i {
+	font-size: 24px;
+}
+footer #copy {
+	display: none;
+}
+
+
+
+
+/*------------MediaQuery------------*/
+/*681px以上 1024px*/
+@media screen and (min-width: 681px) {
+	/*  header  */
+	header {
+		margin: 0 auto;
+		position: relative;
+		max-width: 1024px;
+	}
+	header #topphoto {
+		margin: 0 auto;
+		max-width: 1024px;
+		height: 600px;
+		background-image: url(imgs/cutcutcutmain.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	#navpc {
+		max-width: 1024px;
+		line-height: 45px;
+		margin: 0 auto;
+		display: block;
+	}
+	#navpc ul {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		font-size: 13px;
+		list-style: none;
+		background: white;
+	}
+	#navpc ul li {
+		width: 30%;
+		margin-right: 10px;
+	}
+	#navpc ul li:last-of-type {
+		margin-right: 0;
+	}
+	#navpc ul li a {
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		color: dimgray;
+	}
+	#navpc ul li a:hover {
+		line-height: 36px;
+		margin-top: 8px;
+		border-top: solid 1px dimgray;
+		opacity: 0.7;
+	}
+	#navs {
+		display: none;
+	}
+	#call {
+		margin-top: 10px;
+	}
+	#word {
+		margin-top: 150px;
+		line-height: 40px;
+	}
+	#road {
+		margin-top: 150px;
+		height: 200px;
+	}
+	#roadin {
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+	}
+	#road a {
+		margin: 0 10px;
+	}
+	#road a:last-of-type {
+		margin-top: 0;
+	}
+	#maininner {
+		display: block;
+	}
+
+	#frontfoot {
+		margin-bottom: 0;
+		display: block;
+	}
+	footer #foot {
+		padding-bottom: 23px;
+		height: 50px;
+		position: relative;
+		justify-content: center;
+	}
+	footer #foot p {
+		margin-right: 24px;
+	}
+	footer #foot p:last-of-type {
+		margin-right: 0;
+	}
+	footer #foot p a:hover {
+		text-decoration: underline;
+	}
+	footer #foot p i {
+		text-indent: -99999px;
+	}
+	footer #copy {
+		display: block;
+		margin: auto 0;
+		text-align: center;
+		font-size: 10px;
+		background: rgba(65,105,225,0.9);
+		color: white;
+	}
+
+	@media screen and (min-width: 1024px) {
+		#navs ul {
+			right: 150px;
+		}
+	}
+
+}

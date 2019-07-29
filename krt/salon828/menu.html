@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>MENU</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="imgs/logoLMS.png">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+	<!-- Link Swiper's CSS -->
+ 	<link rel="stylesheet" href="swiper.css">
+ 	<!-- ローディング用js boss -->
+	<script src="jquery-1.12.1.min.js"></script>
+	<script type="text/javascript">
+    var $1121 = $.noConflict(true);
+	</script>
+	<!-- JQ boss -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- fade JS -->
+	<script src="fade.js"></script>
+ 	<!-- Swiper JS -->
+ 	<script src="swiper.min.js"></script>
+	<style>
+	/* ローディング用 */
+	#fade-image div {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		margin:auto;
+		background: center no-repeat;
+		background-size: 150px 150px;
+		display: none;
+		z-index: 9999;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html,body {
+		height: 100%;
+	}
+	img {
+		width: 100%;
+		height: 100%
+		vertical-align: top;
+	}
+	#wrap {
+		width: 100%;
+		font-size: 10.5px;
+		margin: 0 auto;
+		font-family: 'Sawarabi Gothic', sans-serif;
+	}
+	#navpc {
+		display: none;
+	}
+	#mainph {
+		margin: 0 10px;
+		height: 180px;
+	}
+	.swiper-container {
+		height: 200px;
+	}
+	h1 {
+		margin: 50px 5% 0;
+		border-bottom: solid 1px black;
+		font-size: 21px;
+	}
+	h2 {
+		margin: 50px 5% 7px;
+		border-bottom: solid 1px black;
+		font-size: 19px;
+	}
+	h2 img {
+		width: 20px;
+		height: 20px;
+		margin: 0 4px -4px 0;
+	}
+	table {
+		width: 100%;
+	}
+	th {
+		width: 40%;
+	}
+	td {
+		width: 15%;
+	}
+
+	/*  shampoo紹介  */
+	#shoukai h2 {
+		margin-top: 20px;
+	}
+	#bottomph {
+		margin: 100px 10px 0;
+		height: 170px;
+		background-image: url(imgs/skincare1.jpg) ;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-indent: -99999px;
+	}
+	#word {
+		margin: 15px 7%;
+	}
+	#shoukai {
+		padding-bottom: 100px;
+	}
+
+	/*  footer  */
+	footer #foot {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-around;
+		height: 52px;
+		background: rgba(65,105,225,0.9);
+	}
+	footer #foot p {
+		margin: auto 0;
+		text-align: center;
+		margin-right: 1%;
+		color: white;
+	}
+	footer #foot p a {
+		font-size: 13px;
+		text-decoration: none;
+		color: white;
+	}
+	footer #foot p a:hover {
+		opacity: 0.5;
+	}
+	footer #foot p i {
+		font-size: 24px;
+	}
+	footer #copy {
+		display: none;
+	}
+
+	/*------------MediaQuery------------*/
+	/*681px以上 1024px*/
+	@media screen and (min-width: 681px) {
+		#wrap {
+			font-size: 13.5px;
+		}
+		#navpcdiv {
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+		#navpc {
+			max-width: 1024px;
+			line-height: 45px;
+			margin: 0 auto;
+			display: block;
+		}
+		#navpc ul {
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			font-size: 13px;
+			list-style: none;
+			background: white;
+		}
+		#navpc ul li {
+			width: 30%;
+			margin-right: 10px;
+		}
+		#navpc ul li:last-of-type {
+			margin-right: 0;
+		}
+		#navpc ul li a {
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			color: dimgray;
+		}
+		#navpc ul li a:hover {
+			line-height: 36px;
+			margin-top: 8px;
+			border-top: solid 1px dimgray;
+			opacity: 0.7;
+		}
+		.swiper-container {
+			margin: 0 auto;
+			max-width: 1024px ;
+			height: 500px;
+		}
+		h1 {
+			margin: 340px 5% 0;
+		}
+		h2 {
+			margin-top: 80px;
+		}
+		#menu {
+			margin: 0 auto;
+			max-width: 1024px;
+		}
+		#shoukai {
+			margin-top: 250px;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 1024px;
+		}
+		#bottomph {
+			height: 400px;
+		}
+		footer #foot {
+			padding-bottom: 23px;
+			height: 50px;
+			position: relative;
+			justify-content: center;
+		}
+		footer #foot p {
+			margin-right: 24px;
+		}
+		footer #foot p:last-of-type {
+			margin-right: 0;
+		}
+		footer #foot p a:hover {
+			text-decoration: underline;
+		}
+		footer #foot p i {
+			text-indent: -99999px;
+		}
+		footer #copy {
+			display: block;
+			margin: auto 0;
+			text-align: center;
+			font-size: 10px;
+			background: rgba(65,105,225,0.9);
+			color: white;
+		}
+	}
+		/*681px以上 1024px*/
+		@media screen and (min-width: 801px) {
+			.swiper-slide {
+				margin-top: -100px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!-- PCmenu -->
+		<div id="navpcdiv">
+			<nav id="navpc">
+				<ul>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/index.html"><i class="fas fa-desktop"></i> トップ</a></li>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/menu.html"><i class="fas fa-clipboard-list"></i> メニュー・料金</a></li>
+					<li><a href="https://suikawa.github.io/portfolio/krt/salon828/shop.html"><i class="fas fa-map-marked-alt"></i> 店舗</a></li>
+				</ul>
+			</nav>
+		</div>
+		<header id="mainph">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="imgs/nagashi.jpg" width="1024" alt="シャンプー"></div>
+					<div class="swiper-slide"><img src="imgs/makimaki.jpg" width="1024" alt="パーマ"></div>
+					<div class="swiper-slide"><img src="imgs/hasami2.jpg" width="1024" alt="ハサミ"></div>
+				</div>
+				<!-- Add Pagination -->
+				<!-- <div class="swiper-pagination"></div> -->
+			</div>
+		</header>
+		<!-- menu -->
+		<div id="menu">
+			<h1>MENU</h1>
+			<table id="cut">
+				<h2><img src="imgs/logoLMS.png" width="100" alt="cut">CUT</h2>
+				<tr>
+					<th>カット</th>
+					<td>￥ 4000</td>
+				</tr>
+				<tr>
+					<th>カット（シャンプー、ブロー無し）</th>
+					<td>￥ 3000</td>
+				</tr>
+			</table>
+			<table id="color">
+				<h2><img src="imgs/logoMSL.png" width="100" alt="color">COLOR</h2>
+				<tr>
+					<th>カラー （シャンプー、ブロー含む）</th>
+					<td>￥ 5500～</td>
+				</tr>
+				<tr>
+					<th>白髪染め （シャンプー、ブロー含む）</th>
+					<td>￥ 5500～</td>
+				</tr>
+			</table>
+			<table id="perm">
+				<h2><img src="imgs/logoSLM.png" width="100" alt="perm">PERM</h2>
+				<tr>
+					<th>スタンダードパーマ （カット含む）</th>
+					<td>￥<span style="margin-right: 1em;"></span>8800～</td>
+				</tr>
+				<tr>
+					<th>デジタルパーマ （カット含む）</th>
+					<td>￥ 12800～</td>
+				</tr>
+				<tr>
+					<th>ストレートパーマ （カット含む）</th>
+					<td>￥ 13500～</td>
+				</tr>
+				<tr>
+					<th>縮毛矯正 （カット含む）</th>
+					<td>￥ 14500～</td>
+				</tr>
+			</table>
+			<table id="treatment">
+				<h2><img src="imgs/logoSML.png" width="100" alt="treatment">TREATMENT</h2>
+				<tr>
+					<th>トリートメント （シャンプー、ブロー含む）</th>
+					<td>￥ 3000～</td>
+				</tr>
+			</table>
+			<table id="spa">
+				<h2><img src="imgs/logoLMS.png" width="100" alt="head spa">HEAD SPA</h2>
+				<tr>
+					<th>ヘッドスパ (シャンプー、ブロー含む）</th>
+					<td>￥ 3500</td>
+				</tr>
+			</table>
+			<table id="shampoo">
+				<h2><img src="imgs/logoMSL.png" width="100" alt="shampoo">SHAMPOO & BROW</h2>
+				<tr>
+					<th>シャンプー、ブロー</th>
+					<td>￥ 2800～</td>
+				</tr>
+			</table>
+		</div>
+		<!-- shampoo紹介 -->
+		<div id="shoukai">
+			<p id="bottomph">写真</p>
+			<h2><img src="imgs/logo1.png" width="100" alt="shampoo">organic shampoo</h2>
+			<p id="word">当サロンではこだわりのオーガニックシャンプーを使用しています。<br>使うほど実感する、ナチュラルな髪質へと変わっていく楽しさをぜひご体験ください。</p>
+		</div>
+		<!-- footer -->
+		<footer>
+			<div id="foot">
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/index.html"><i class="fas fa-desktop"></i><br>トップ</a></p>
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/menu.html"><i class="fas fa-clipboard-list"></i><br>料金</a></p>
+				<p><a href="https://suikawa.github.io/portfolio/krt/salon828/shop.html"><i class="fas fa-map-marked-alt"></i><br>店舗</a></p>
+			</div>
+			<p id="copy">© 2018 Kawanami</p>
+		</footer>
+	</div>
+
+
+
+ 	<script>
+ 	/* ローディング用 */
+	(function($){
+    // ライブラリ本体のjavascript・・・
+
+	deley_time = 3100; //フェードアニメーションのスピード 1000 = 1秒
+	    image_list = [
+	    　 "imgs/cutcutcutlogo3.gif",
+	    ]
+	})($1121)
+	</script>
+
+	<!-- swiper -->
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+    	spaceBetween: 10,
+    	centeredSlides: true,
+    	autoplay: {
+    		delay: 5000,
+    		disableOnInteraction: false,
+    	},
+    	pagination: {
+    		el: '.swiper-pagination',
+    		clickable: true,
+    	},
+    });
+ 	</script>
+</body>
+</html>
